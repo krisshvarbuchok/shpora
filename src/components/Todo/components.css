@@ -1,0 +1,17 @@
+
+code {
+    color: aqua;
+
+}
+pre {
+    display: block;
+    
+    white-space: pre;
+    margin: 1em 0px;
+}
+.text-blok{
+    text-align: left;
+}
+h1{
+    text-align: center;
+}

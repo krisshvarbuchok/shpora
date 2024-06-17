@@ -1,7 +1,7 @@
 import logo from '../logo.svg';
 import '../App.css';
 import home from '../home.svg';
-import { Routes, Route, Link, Router } from 'react-router-dom';
+import { Routes, Route, Link } from 'react-router-dom';
 import Components from './Todo/Components';
 import HomePicture from './Todo/HomePicture';
 import Props from './Todo/Props';
@@ -28,8 +28,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" width='100px' />
       </header>
       <section>
-      <div className='menu'>
-        
+      <div className='theory'>
         <Routes>
           <Route path="/" element={<HomePicture />} />
           <Route path="/components" element={<Components />} />
@@ -50,7 +49,7 @@ function App() {
 
         </Routes>
         </div>
-        <div className='theory'>
+        <div className='menu'>
         ТЕМЫ:
         <Link to="/components">Components</Link>
         <Link to="/props">Props</Link>
@@ -67,7 +66,7 @@ function App() {
         <Link to="/routerComponent">Router</Link>
         <Link to="/contextComponent">Context</Link>
         <Link to="/formComponent">Form</Link>
-        /
+        
       </div>
       </section>
     </div>

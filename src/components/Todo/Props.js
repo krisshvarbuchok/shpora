@@ -1,8 +1,9 @@
+import '../../App.css';
 const Props = () => {
 
     return (
-        <div>
-            <div class='text-blok'>
+        <>
+            <div className='text-blok'>
                 <h1>Props</h1>
                 <p>Пропсы (сокращение от properties) - это данные, которые передаются в компоненты React для настройки их поведения и внешнего вида (аргументы в мире функций).</p>
                 <p>Props представляют собой объект, содержащие свойства. Обратиться к ним можно - props.имя-свойства. Используется только для <strong>чтения</strong>! Но можно использовать состояние компонента (state) для изменения пропсов.</p>
@@ -10,30 +11,30 @@ const Props = () => {
                 <p>Пример с функциональной компонентой:</p>
 
             </div>
-            <div class='code-blok'>
+            <div className='code-blok'>
                 <pre>
                     <code>{
-                            `// Родительский компонент
+`// Родительский компонент
 const ParentComponent = () => {
   const message = "Привет, Redev!";
   return <ChildComponent message={message} />;
 }
 
 // Дочерний компонент
-const ChildComponent = (props) => {  //props = {message: "Привет, Redev!"}
+const ChildComponent = (props) => {             //props = {message: "Привет, Redev!"}
   return <div>{props.message}</div>; 
 }`
                     }</code>
                 </pre>
             </div>
-            <div class='text-blok'>
+            <div className='text-blok'>
                     <p>Пример с классовой компонентой:</p>
             </div>
-            <div class='code-blok'>
+            <div className='code-blok'>
                     <pre>
                         <code>{
-                            `//ParentComponent.js
-                            class MyComponent extends React.Component {
+`//ParentComponent.js
+class MyComponent extends React.Component {
      render() {
         return <div><ChildComponent name={'Alex'} /></div>;
     }
@@ -53,7 +54,11 @@ export default ChildComponent`
                         }</code>
                     </pre>
             </div>
-        </div>
+            <div className="text-blok">
+              <p>как от дочернего в родительский перекинуть пропс</p>
+              <p className="warning">в родительском создаёшь функцию и пишешь функционал, а в дочерней вызываешь эту функцию и что-нибудб передаёшь в параметр, попробуй тип создай функцию в родительском  с параметрами a,b, а в дочерней вызови эту функцию и передай аргументами а и б, и посмотри чтобы к примеру в консоль выводило число</p>
+            </div>
+        </>
     )
 }
 export default Props;

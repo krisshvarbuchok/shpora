@@ -1,17 +1,22 @@
 
 code {
-    color: aqua;
-
+    color: #002029;
+    font-size: 14px;
 }
 pre {
     display: block;
     
-    white-space: pre;
-    margin: 1em 0px;
 }
 .text-blok{
     text-align: left;
 }
 h1{
     text-align: center;
+}
+ul li{
+    margin-left: 40px;
+}
+p{
+    margin:10px auto;
+    
 }

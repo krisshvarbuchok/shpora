@@ -2,7 +2,7 @@ import './components.css';
 const Components = () => {
 
     return (
-        <div >
+        <>
            <div class='text-blok'>
                 <h1>Компоненты</h1>
                 <p>Компоненты React — это многократно иcпользуемые фрагменты JavaScript-кода, которые выводят HTML-элементы (благодаря JSX ).</p>
@@ -28,11 +28,12 @@ export default MyComponent;`
             </div>
             <div class='code-blok'>
                 <pre>
-                    <code> {`const MyComponent = () => {
-  return <div>Hello, Redev!</div>;
+                    <code> {
+`const MyComponent = () => {
+    return <div>Hello, Redev!</div>;
 }
-export default MyComponent;`}
-                    </code>
+export default MyComponent;`
+                    }</code>
                 </pre>
 
             </div>
@@ -48,7 +49,7 @@ export default MyComponent;`}
                 <p><strong>Stateless</strong> компоненты просто рендерят UI, в то время как <strong>stateful</strong> компоненты имеют внутреннее состояние, которое позволяет им изменять своё поведение в ответ на события (хуки useState и useEffect).</p>
             </div>
             
-        </div>
+        </>
         
     )
 }

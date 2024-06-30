@@ -1,7 +1,14 @@
 *{
-  text-decoration: none;
-  color: rgb(255, 255, 255);
+  text-decoration:none ;
+
+  font-size: 18px;
+  /* color: rgb(255, 255, 255); */
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  
 }
+
 .App {
   text-align: center;
 }
@@ -9,7 +16,7 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
-}
+} 
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -18,8 +25,7 @@
 }
 
 .App-header {
-  margin-left:20px ;
-  margin-right: 20px;
+
   background-color: #282c34;
   height: 100px;
   display: flex;
@@ -27,12 +33,16 @@
   align-items: center;
   justify-content: space-between;
   font-size: calc(10px + 2vmin);
-  color: white;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+ 
 }
+
 
 @keyframes App-logo-spin {
   from {
@@ -42,11 +52,12 @@
     transform: rotate(360deg);
   }
 }
-section{
+.shpora {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-around;
-  gap: 40px;
+  justify-content: space-evenly;
+  gap: 30px;
+  height: 100%;
   
 }
 
@@ -54,12 +65,102 @@ section{
   display: flex;
   flex-direction: column;
   height: auto; 
-  width: 900px;
+  width: 80%;
 }
 .menu{
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 200px;
+  width: 15%;
+  text-align: center;
+}
+
+
+.code-blok{
+  padding: 20px;
+  margin: 10px 0;
+  background-color: white;
+  border-radius: 20px;
+  text-align: start; 
+  width: 90%;
+}
+
+.list-item {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  transition: all 0.3s;
   
+}
+.router-item{
+  
+  color: #e29051;
+}
+.router-item:hover{
+  transition: all 0.3s;
+  color: #ee4014;
+}
+.active{
+  color: red;
+}
+/* .list-item:hover{
+  cursor: pointer;
+  transition: all 0.3s; 
+  /* транзишн делает анимацию на появляение болерд радиуса, так не должно быть, посмотри в интеренете как поставить транзишн на какой то один ивент */
+ /* background-color: bisque;
+  border-radius: 10px;
+  color: black;
+}  */
+
+.button-counter{
+  background-color: beige;
+  color: #282c34;
+  padding: 20px;
+  border-radius: 20px;
+}
+.counter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.counter p{
+  margin:auto 10px;
+}
+.warning{
+  color: red;
+}
+.button-theme{
+  padding: 5px;
+  background-color: white;
+  color: rgb(4, 136, 156);
+  border-radius: 20px;
+}
+
+#dark{
+  background-color: #282c34;
+  color: rgb(255, 255, 255);
+}
+#ligth{
+  background-color: #fefee8;
+  color: rgb(65, 61, 61);
+}
+
+.menu a#light{
+  color: black;
+}
+.menu a#dark:hover{
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s; 
+  /* транзишн делает анимацию на появляение болерд радиуса, так не должно быть, посмотри в интеренете как поставить транзишн на какой то один ивент */
+  background-color: bisque;
+  border-radius: 10px;
+}
+.menu a#light:hover{
+  color: black;
+  cursor: pointer;
+  transition: all 0.3s; 
+  /* транзишн делает анимацию на появляение болерд радиуса, так не должно быть, посмотри в интеренете как поставить транзишн на какой то один ивент */
+  background-color: bisque;
+  border-radius: 10px;
 }

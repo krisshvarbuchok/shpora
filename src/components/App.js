@@ -31,7 +31,8 @@ import UseParams from './Todo/UseParams';
 import UseLocation from './Todo/UseLocation';
 import OutletComponent from './Todo/OutletComponent';
 import PrivateRouteComponent from './Todo/PrivateRouteComponent';
-
+import { Button } from "antd"
+;
 
 
 
@@ -53,6 +54,8 @@ function App() {
           <p>Основная теория по библиотеке React</p>
           <img src={logo} className="App-logo" alt="logo" width='100px' />
           <button onClick={handleClick} className='button-theme'> Тема </button>
+          <Button type="primary">Primary Button</Button>
+
         </header>
         <section className='container shpora' id={theme}>
           <div className='theory' id={theme}>

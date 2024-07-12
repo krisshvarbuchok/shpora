@@ -31,8 +31,8 @@ import UseParams from './Todo/UseParams';
 import UseLocation from './Todo/UseLocation';
 import OutletComponent from './Todo/OutletComponent';
 import PrivateRouteComponent from './Todo/PrivateRouteComponent';
-import { Button } from "antd"
-;
+import { Button } from "antd";
+import HOC from './Todo/HOC';
 
 
 
@@ -90,6 +90,7 @@ function App() {
               <Route path="/contextComponent" element={<ContextComponent />} />
               <Route path="/formComponent" element={<FormComponent />} />
               <Route path="/storages" element={<Storages />} />
+              <Route path="/hoc" element={<HOC />} />
               
 
             </Routes>
@@ -120,6 +121,7 @@ function App() {
 
             <Link className='list-item' id={theme} to="/formComponent">Form</Link>
             <Link className='list-item' id={theme} to="/storages">Storages</Link>
+            <Link className='list-item' id={theme} to="/hoc">HOC</Link>
 
           </div>
         </section>

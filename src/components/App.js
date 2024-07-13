@@ -33,6 +33,7 @@ import OutletComponent from './Todo/OutletComponent';
 import PrivateRouteComponent from './Todo/PrivateRouteComponent';
 import { Button } from "antd";
 import HOC from './Todo/HOC';
+import LazyAndSuspense from './Todo/LazyAndSuspense';
 
 
 
@@ -91,6 +92,7 @@ function App() {
               <Route path="/formComponent" element={<FormComponent />} />
               <Route path="/storages" element={<Storages />} />
               <Route path="/hoc" element={<HOC />} />
+              <Route path="/lazyAndSuspense" element={<LazyAndSuspense />} />
               
 
             </Routes>
@@ -122,6 +124,7 @@ function App() {
             <Link className='list-item' id={theme} to="/formComponent">Form</Link>
             <Link className='list-item' id={theme} to="/storages">Storages</Link>
             <Link className='list-item' id={theme} to="/hoc">HOC</Link>
+            <Link className='list-item' id={theme} to="/lazyAndSuspense">Lazy&Suspense</Link>
 
           </div>
         </section>

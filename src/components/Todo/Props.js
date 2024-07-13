@@ -21,7 +21,7 @@ const ParentComponent = () => {
 }
 
 // Дочерний компонент
-const ChildComponent = (props) => {             //props = {message: "Привет, Redev!"}
+const ChildComponent = (props) => {     //props = {message: "Привет, Redev!"}
   return <div>{props.message}</div>; 
 }`
                     }</code>

@@ -1,4 +1,4 @@
-import { useNavigate, useLocation, Link, Outlet, NavLink } from 'react-router-dom';
+import {  Outlet, NavLink } from 'react-router-dom';
 
 
 const RouterComponent = () => {

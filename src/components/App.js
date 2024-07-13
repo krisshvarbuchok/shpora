@@ -34,6 +34,11 @@ import PrivateRouteComponent from './Todo/PrivateRouteComponent';
 import { Button } from "antd";
 import HOC from './Todo/HOC';
 import LazyAndSuspense from './Todo/LazyAndSuspense';
+import StrictModeComponent from './Todo/StrictModeComponent';
+import ProfilerComponent from './Todo/ProfilerComponent';
+import ErrorBoundaryComponent from './Todo/ErrorBoundaryComponent';
+import LazyComponent from './Todo/LazyComponent';
+import SuspenseComponent from './Todo/SuspenseComponent';
 
 
 
@@ -92,7 +97,14 @@ function App() {
               <Route path="/formComponent" element={<FormComponent />} />
               <Route path="/storages" element={<Storages />} />
               <Route path="/hoc" element={<HOC />} />
-              <Route path="/lazyAndSuspense" element={<LazyAndSuspense />} />
+              <Route path="/lazyAndSuspense" element={<LazyAndSuspense />}>
+                <Route path="lazyComponent" element={<LazyComponent />} >
+                  <Route path="errorBoundary" element={<ErrorBoundaryComponent />} />
+                </Route>
+                <Route path="suspenseComponent" element={<SuspenseComponent />} />
+              </Route>
+              <Route path="/strictModeComponent" element={<StrictModeComponent />} />
+              <Route path="/profilerComponent" element={<ProfilerComponent />} />
               
 
             </Routes>
@@ -125,6 +137,8 @@ function App() {
             <Link className='list-item' id={theme} to="/storages">Storages</Link>
             <Link className='list-item' id={theme} to="/hoc">HOC</Link>
             <Link className='list-item' id={theme} to="/lazyAndSuspense">Lazy&Suspense</Link>
+            <Link className='list-item' id={theme} to="/strictModeComponent">StrictMode</Link>
+            <Link className='list-item' id={theme} to="/profilerComponent">Profiler</Link>
 
           </div>
         </section>

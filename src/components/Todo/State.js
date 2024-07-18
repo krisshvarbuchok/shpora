@@ -61,7 +61,8 @@ export default Counter;`
                 <pre>
                     <code>{
 `class Example extends React.Component {
-    constructor() {
+    constructor(props) {
+    super(props)
         this.state = { count: 0 }
     }
 
@@ -76,7 +77,7 @@ export default Counter;`
         return (
             <div>
                 <p>Ты кликнул {this.state.count} раз</p>
-                <button onClick={handleClick}>Кликни сюда</button>
+                <button onClick={this.handleClick}>Кликни сюда</button>
             </div>
         );
     }

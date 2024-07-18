@@ -62,7 +62,7 @@ export default Counter;`
                     <code>{
 `class Example extends React.Component {
     constructor(props) {
-    super(props)
+        super(props)
         this.state = { count: 0 }
     }
 

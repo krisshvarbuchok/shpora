@@ -3,7 +3,8 @@ import '../App.css';
 import home from '../home.svg';
 import { Routes, Route, Link, useNavigate } from 'react-router-dom';
 import Components from './Todo/Components';
-import HomePicture from './Todo/HomePicture';
+import React, { Suspense } from 'react';
+// import HomePicture from './Todo/HomePicture';
 import Props from './Todo/Props';
 import State from './Todo/State';
 import Lifecycle from './Todo/Lifecycle';
@@ -39,7 +40,7 @@ import ProfilerComponent from './Todo/ProfilerComponent';
 import ErrorBoundaryComponent from './Todo/ErrorBoundaryComponent';
 import LazyComponent from './Todo/LazyComponent';
 import SuspenseComponent from './Todo/SuspenseComponent';
-
+const LazyHousePicture = React.lazy(() => import ('./Todo/HomePicture'));
 
 
 
@@ -65,10 +66,11 @@ function App() {
         </header>
         <section className='container shpora' id={theme}>
           <div className='theory' id={theme}>
-        
+          <Suspense fallback={<div>Loading...</div>}>
             <Routes>
-         
-              <Route path="/" element={<HomePicture />} />
+              {/* <Suspense fallback={<div>Loading...</div>}> */}
+                  <Route path="/" element={<LazyHousePicture />} />
+              {/* </Suspense> */}
               <Route path="/components" element={<Components />} />
               <Route path="/props" element={<Props />} />
               <Route path="/state" element={<State />} />
@@ -108,7 +110,7 @@ function App() {
               
 
             </Routes>
-
+            </Suspense>
 
           </div>
           <div className='menu'>

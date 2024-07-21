@@ -1,47 +1,47 @@
 import logo from '../logo.svg';
 import '../App.css';
 import home from '../home.svg';
-import { Routes, Route, Link, useNavigate } from 'react-router-dom';
-import Components from './Todo/Components';
-import React, { Suspense } from 'react';
-// import HomePicture from './Todo/HomePicture';
-import Props from './Todo/Props';
-import State from './Todo/State';
-import Lifecycle from './Todo/Lifecycle';
-import Events from './Todo/Events';
-import Key from './Todo/Key';
-import Refs from './Todo/Refs';
-import AsynchronousRequests from './Todo/AsynchronousRequests';
-import VirtualDOM from './Todo/VirtualDOM';
-import ReactMemo from './Todo/ReactMemo';
-import UseEffect from './Todo/UseEffect';
-import RouterComponent from './Todo/RouterComponent';
-import FragmentComponent from './Todo/FragmentComponent';
-import ContextComponent from './Todo/ContextComponent';
-import FormComponent from './Todo/FormComponent';
-import UseMemo from './Todo/UseMemo';
-import UseCallback from './Todo/UseCallback';
-import { useState } from 'react';
-import MyContext from './Todo/MyContext';
-import Storages from './Todo/Storages';
-import RoutesAndRoute from './Todo/RoutesAndRoute';
-import LinkComponent from './Todo/LinkComponent';
-import NavLinkComponent from './Todo/NavLinkComponent';
-import UseNavigate from './Todo/UseNavigate';
-import UseParams from './Todo/UseParams';
-import UseLocation from './Todo/UseLocation';
-import OutletComponent from './Todo/OutletComponent';
-import PrivateRouteComponent from './Todo/PrivateRouteComponent';
-import { Button } from "antd";
-import HOC from './Todo/HOC';
-import LazyAndSuspense from './Todo/LazyAndSuspense';
-import StrictModeComponent from './Todo/StrictModeComponent';
-import ProfilerComponent from './Todo/ProfilerComponent';
-import ErrorBoundaryComponent from './Todo/ErrorBoundaryComponent';
-import LazyComponent from './Todo/LazyComponent';
-import SuspenseComponent from './Todo/SuspenseComponent';
-const LazyHousePicture = React.lazy(() => import ('./Todo/HomePicture'));
+import { Link } from 'react-router-dom';
+// import Components from './Todo/Components/Components';
 
+// import HomePicture from './Todo/HomePicture';
+// import Props from './Todo/Props/Props';
+// import State from './Todo/State/State';
+// import Lifecycle from './Todo/Lifecycle&useEffect/Lifecycle';
+// import Events from './Todo/Events/Events';
+// import Key from './Todo/Key/Key';
+// import Refs from './Todo/Refs/Refs';
+// import AsynchronousRequests from './Todo/AsynchronousRequests/AsynchronousRequests';
+// import VirtualDOM from './Todo/VirtualDOM/VirtualDOM';
+// import ReactMemo from './Todo/Optimization/ReactMemo';
+// import UseEffect from './Todo/Lifecycle&useEffect/UseEffect';
+// import RouterComponent from './Todo/Router/RouterComponent';
+// import FragmentComponent from './Todo/Fragment/FragmentComponent';
+// import ContextComponent from './Todo/Context/ContextComponent';
+// import FormComponent from './Todo/Form/FormComponent';
+// import UseMemo from './Todo/Optimization/UseMemo';
+// import UseCallback from './Todo/Optimization/UseCallback';
+import { useState } from 'react';
+import MyContext from './Todo/MyContext/MyContext';
+// import Storages from './Todo/Storages/Storages';
+// import RoutesAndRoute from './Todo/Router/RoutesAndRoute';
+// import LinkComponent from './Todo/Router/LinkComponent';
+// import NavLinkComponent from './Todo/Router/NavLinkComponent';
+// import UseNavigate from './Todo/Router/UseNavigate';
+// import UseParams from './Todo/Router/UseParams';
+// import UseLocation from './Todo/Router/UseLocation';
+// import OutletComponent from './Todo/Router/OutletComponent';
+// import PrivateRouteComponent from './Todo/Router/PrivateRouteComponent';
+import { Button } from "antd";
+// import HOC from './Todo/HOC/HOC';
+// import LazyAndSuspense from './Todo/LazyAndSuspense/LazyAndSuspense';
+// import StrictModeComponent from './Todo/StrictMode/StrictModeComponent';
+// import ProfilerComponent from './Todo/Profiler/ProfilerComponent';
+// import ErrorBoundaryComponent from './Todo/ErrorBoundary/ErrorBoundaryComponent';
+// import LazyComponent from './Todo/LazyAndSuspense/LazyComponent';
+// import SuspenseComponent from './Todo/LazyAndSuspense/SuspenseComponent';
+// const LazyHousePicture = React.lazy(() => import ('./Todo/HomePicture/HomePicture'));
+import AppRoutes from '../routes/routes';
 
 
 
@@ -50,8 +50,6 @@ function App() {
   const handleClick = () => {
     setTheme(theme === 'dark' ? 'light' :'dark')
 }
-
-
 
   return (
     <MyContext.Provider value={[theme, setTheme]}>
@@ -66,52 +64,7 @@ function App() {
         </header>
         <section className='container shpora' id={theme}>
           <div className='theory' id={theme}>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Routes>
-              {/* <Suspense fallback={<div>Loading...</div>}> */}
-                  <Route path="/" element={<LazyHousePicture />} />
-              {/* </Suspense> */}
-              <Route path="/components" element={<Components />} />
-              <Route path="/props" element={<Props />} />
-              <Route path="/state" element={<State />} />
-              <Route path="/lifecycle" element={<Lifecycle />} />
-              <Route path="/events" element={<Events />} />
-              <Route path="/key" element={<Key />} />
-              <Route path="/refs" element={<Refs />} />
-              <Route path="/asynchronousRequests" element={<AsynchronousRequests />} />
-              <Route path="/virtualDOM" element={<VirtualDOM />} />
-              <Route path="/fragmentComponent" element={<FragmentComponent />} />
-              <Route path="/reactMemo" element={<ReactMemo />} />
-              <Route path="/useMemo" element={<UseMemo />} />
-              <Route path="/useeffect" element={<UseEffect />} />
-              <Route path="/useCallback" element={<UseCallback />} />
-              <Route path="/routerComponent" element={<RouterComponent />} >
-                  <Route path="routesandroute" element={<RoutesAndRoute />} />
-                  <Route path="linkComponent" element={<LinkComponent />} />
-                  <Route path="navlinkComponent" element={<NavLinkComponent />} />
-                  <Route path="usenavigate" element={<UseNavigate />} />
-                  <Route path="useparams" element={<UseParams />} />
-                  <Route path="uselocation" element={<UseLocation />} />
-                  <Route path="outlet" element={<OutletComponent />} />
-                  <Route path="privateroute" element={<PrivateRouteComponent />} />
-              </Route>
-              <Route path="/contextComponent" element={<ContextComponent />} />
-              <Route path="/formComponent" element={<FormComponent />} />
-              <Route path="/storages" element={<Storages />} />
-              <Route path="/hoc" element={<HOC />} />
-              <Route path="/lazyAndSuspense" element={<LazyAndSuspense />}>
-                <Route path="lazyComponent" element={<LazyComponent />} >
-                  <Route path="errorBoundary" element={<ErrorBoundaryComponent />} />
-                </Route>
-                <Route path="suspenseComponent" element={<SuspenseComponent />} />
-              </Route>
-              <Route path="/strictModeComponent" element={<StrictModeComponent />} />
-              <Route path="/profilerComponent" element={<ProfilerComponent />} />
-              
-
-            </Routes>
-            </Suspense>
-
+            <AppRoutes />
           </div>
           <div className='menu'>
             ТЕМЫ:
@@ -134,7 +87,6 @@ function App() {
 
 
             <Link className='list-item'id={theme}  to="/routerComponent">Router</Link>
-
             <Link className='list-item' id={theme} to="/formComponent">Form</Link>
             <Link className='list-item' id={theme} to="/storages">Storages</Link>
             <Link className='list-item' id={theme} to="/hoc">HOC</Link>

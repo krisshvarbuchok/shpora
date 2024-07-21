@@ -6,13 +6,13 @@ const State = () => {
 
     return(
         <>
-            <div class='text-blok'>
+            <div className='text-blok'>
                 <h1>State(useState)</h1>
                 <p><strong>State (состояние)</strong> в React – это объект простого JS, позволяющий отслеживать данные компонента. Состояние компонента может меняться. Изменения могут основываться на ответе от пользователя, новых сообщениях с сервера, ответа сети и т.д.</p>
                 <p><strong>useState</strong> это хук. <strong>Хук</strong> (hook) в контексте React — это специальная функция, которая позволяет "подключаться" к возможностям React из функциональных компонентов. </p>
                 <p>В React state используются в функциональных компонентах с помощью хука useState.</p>
             </div>
-            <div class='code-blok'>
+            <div className='code-blok'>
                 <pre>
                     <code>{
 `import React, { useState } from 'react';

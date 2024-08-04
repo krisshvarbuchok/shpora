@@ -46,14 +46,14 @@ ReactDOM.render(
             </div>
            <div className='text-blok'>
                 <ul>
-                    <li><NavLink to="routesandroute" className={({ isActive }) => (isActive ? 'active' : 'router-item')}>Routes and Route</NavLink></li>
-                    <li><NavLink to="linkComponent" className={({ isActive }) => (isActive ? 'active' : 'router-item')} >Link</NavLink></li>
-                    <li><NavLink to="navlinkComponent" className={({ isActive }) => (isActive ? 'active' : 'router-item')}>NavLink</NavLink></li>
-                    <li><NavLink to="usenavigate" className={({ isActive }) => (isActive ? 'active' : 'router-item')}>useNavigate</NavLink></li>
-                    <li><NavLink to="useparams" className={({ isActive }) => (isActive ? 'active' : 'router-item')}>useParams</NavLink></li>
-                    <li><NavLink to="uselocation" className={({ isActive }) => (isActive ? 'active' : 'router-item')}>useLocation</NavLink></li>
-                    <li><NavLink to="outlet" className={({ isActive }) => (isActive ? 'active' : 'router-item')}>Outlet и вложенные маршруты</NavLink></li>
-                    <li><NavLink to="privateroute" className={({ isActive }) => (isActive ? 'active' : 'router-item')}>PrivateRoute: Защита маршрутов</NavLink></li>
+                    <li><NavLink to="routesandroute" className='router-item'>Routes and Route</NavLink></li>
+                    <li><NavLink to="linkComponent" className='router-item' >Link</NavLink></li>
+                    <li><NavLink to="navlinkComponent" className='router-item'>NavLink</NavLink></li>
+                    <li><NavLink to="usenavigate"className='router-item'>useNavigate</NavLink></li>
+                    <li><NavLink to="useparams" className='router-item'>useParams</NavLink></li>
+                    <li><NavLink to="uselocation" className='router-item'>useLocation</NavLink></li>
+                    <li><NavLink to="outlet" className='router-item'>Outlet и вложенные маршруты</NavLink></li>
+                    <li><NavLink to="privateroute" className='router-item'>PrivateRoute: Защита маршрутов</NavLink></li>
                 </ul>
                 
                 <Outlet />
